@@ -1,6 +1,8 @@
 # WelcomeBack
 Plugin that allows people to get points for welcoming people back on the server
 
+#### Download [here](https://github.com/prosteDeniGC/WelcomeBack/releases)
+
 ## Commands
 
 * **/welcomeback check** - *checks own balance*
