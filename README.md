@@ -27,4 +27,4 @@ Plugin that allows people to get points for welcoming people back on the server
   
 ## PlaceholderAPI
 
-* *WelcomeBack has it's own placeholder, _**`<%welcomeback_balance%>`**_*
+* *WelcomeBack has it's own placeholder, _**`%welcomeback_balance%`**_*
