@@ -31,3 +31,20 @@ Plugin that allows people to get points for welcoming people back on the server
 
 * *WelcomeBack has it's own placeholder, _**`%welcomeback_balance%`**_*
  * no need to install any extensions, just have [PAPI](https://github.com/PlaceholderAPI/PlaceholderAPI) installed and use the placeholder
+
+### For developers
+* add these to pom.xml
+
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>[CURRENTVERSION](https://github.com/PlaceholderAPI/PlaceholderAPI)</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+        
+* if using Gradle or whatever just look at PAPI's dependency https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Hook-into-PlaceholderAPI        
