@@ -109,15 +109,17 @@ public final class WelcomeBack extends JavaPlugin implements Listener {
                     if (!(FriendlyConfig.get().getBoolean("MultipleRewards"))) {
 
                         for (Player s : Bukkit.getOnlinePlayers()) {
-                            if (smallTimer.containsKey(s.getName())) {
-                                if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) <= FriendlyConfig.get().getInt("RewardTimeout")) {
-                                    count++;
-                                    smallTimer.remove(s.getName());
-                                    if (FriendlyConfig.get().getInt("RejoinDelay") > 0) {
-                                        FriendlyTimeList.addPlayer(s.getName());
+                            if (!s.equals(e.getPlayer())) {
+                                if (smallTimer.containsKey(s.getName())) {
+                                    if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) <= FriendlyConfig.get().getInt("RewardTimeout")) {
+                                        count++;
+                                        smallTimer.remove(s.getName());
+                                        if (FriendlyConfig.get().getInt("RejoinDelay") > 0) {
+                                            FriendlyTimeList.addPlayer(s.getName());
+                                        }
+                                    } else if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) > FriendlyConfig.get().getInt("RewardTimeout")) {
+                                        smallTimer.remove(s.getName());
                                     }
-                                } else if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) > FriendlyConfig.get().getInt("RewardTimeout")) {
-                                    smallTimer.remove(s.getName());
                                 }
                             }
                         }
@@ -141,29 +143,31 @@ public final class WelcomeBack extends JavaPlugin implements Listener {
                     } else if (FriendlyConfig.get().getBoolean("MultipleRewards")){
 
                         for (Player s : Bukkit.getOnlinePlayers()) {
-                            if (smallTimer2.containsKey(s.getName())) {
-                                if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer2.get(s.getName()) <= FriendlyConfig.get().getInt("RewardTimeout")) {
+                            if (!s.equals(e.getPlayer())) {
+                                if (smallTimer2.containsKey(s.getName())) {
+                                    if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer2.get(s.getName()) <= FriendlyConfig.get().getInt("RewardTimeout")) {
 
-                                    count = count + FriendlyConfig.get().getInt("OtherPoints");
+                                        count = count + FriendlyConfig.get().getInt("OtherPoints");
 
-                                } else if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer2.get(s.getName()) > FriendlyConfig.get().getInt("RewardTimeout")) {
-                                    smallTimer2.remove(s.getName());
-                                }
-                            }
-                            if (smallTimer.containsKey(s.getName())) {
-                                if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) <= FriendlyConfig.get().getInt("RewardTimeout")) {
-
-                                    count = count + FriendlyConfig.get().getInt("FirstPoints");
-
-                                    smallTimer2.put(s.getName(), smallTimer.get(s.getName()));
-                                    smallTimer.remove(s.getName());
-
-                                    if (FriendlyConfig.get().getInt("RejoinDelay") > 0) {
-                                        FriendlyTimeList.addPlayer(s.getName());
+                                    } else if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer2.get(s.getName()) > FriendlyConfig.get().getInt("RewardTimeout")) {
+                                        smallTimer2.remove(s.getName());
                                     }
+                                }
+                                if (smallTimer.containsKey(s.getName())) {
+                                    if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) <= FriendlyConfig.get().getInt("RewardTimeout")) {
 
-                                } else if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) > FriendlyConfig.get().getInt("RewardTimeout")) {
-                                    smallTimer.remove(s.getName());
+                                        count = count + FriendlyConfig.get().getInt("FirstPoints");
+
+                                        smallTimer2.put(s.getName(), smallTimer.get(s.getName()));
+                                        smallTimer.remove(s.getName());
+
+                                        if (FriendlyConfig.get().getInt("RejoinDelay") > 0) {
+                                            FriendlyTimeList.addPlayer(s.getName());
+                                        }
+
+                                    } else if ((java.lang.System.currentTimeMillis() / 1000) - smallTimer.get(s.getName()) > FriendlyConfig.get().getInt("RewardTimeout")) {
+                                        smallTimer.remove(s.getName());
+                                    }
                                 }
                             }
                         }
@@ -187,3 +191,4 @@ public final class WelcomeBack extends JavaPlugin implements Listener {
     }
 
 }
+
