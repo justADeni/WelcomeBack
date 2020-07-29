@@ -35,16 +35,16 @@ Plugin that allows people to get points for welcoming people back on the server
 ### For developers
 * add these to pom.xml
 
-  `<dependency>`
-        `<groupId>me.clip</groupId>`
-        `<artifactId>placeholderapi</artifactId>`
-        `<version>`[CURRENTVERSION](https://github.com/PlaceholderAPI/PlaceholderAPI)`</version>`
-        `<scope>provided</scope>`
-   `</dependency>`
-        
-    `<repository>`
-        `<id>placeholderapi</id>`
-        `<url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>`
-    `</repository>`
+  `<dependency>`  
+        `<groupId>me.clip</groupId>`  
+        `<artifactId>placeholderapi</artifactId>`  
+        `<version>`[CURRENTVERSION](https://github.com/PlaceholderAPI/PlaceholderAPI)`</version>`  
+        `<scope>provided</scope>`  
+   `</dependency>`  
+          
+    `<repository>`  
+        `<id>placeholderapi</id>`  
+        `<url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>`  
+    `</repository>`  
         
 * if using Gradle or not sure just look at PAPI's dependency [manual](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Hook-into-PlaceholderAPI)        
