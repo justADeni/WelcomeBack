@@ -34,7 +34,7 @@ Plugin that allows people to get points for welcoming people back on the server
 
 ### For developers
 * add these to pom.xml
-
+<pre>
   `<dependency>`\
         `<groupId>me.clip</groupId>`\
         `<artifactId>placeholderapi</artifactId>`\
@@ -46,5 +46,5 @@ Plugin that allows people to get points for welcoming people back on the server
         `<id>placeholderapi</id>`\
         `<url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>`\
     `</repository>`\
-        
+</pre>
 * if using Gradle or not sure just look at PAPI's dependency [manual](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Hook-into-PlaceholderAPI)        
