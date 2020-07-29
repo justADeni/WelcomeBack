@@ -36,15 +36,15 @@ Plugin that allows people to get points for welcoming people back on the server
 * add these to pom.xml
 
   `<dependency>`\
-        &nbsp;&nbsp;&nbsp;&nbsp;`<groupId>me.clip</groupId>`\
-        &nbsp;&nbsp;&nbsp;&nbsp;`<artifactId>placeholderapi</artifactId>`\
-        &nbsp;&nbsp;&nbsp;&nbsp;`<version>`[CURRENTVERSION](https://github.com/PlaceholderAPI/PlaceholderAPI)`</version>`\
-        &nbsp;&nbsp;&nbsp;&nbsp;`<scope>provided</scope>`\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<groupId>me.clip</groupId>`\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<artifactId>placeholderapi</artifactId>`\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<version>`[CURRENTVERSION](https://github.com/PlaceholderAPI/PlaceholderAPI)`</version>`\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<scope>provided</scope>`\
    `</dependency>`\
           
     `<repository>`\
-        &nbsp;&nbsp;&nbsp;&nbsp;`<id>placeholderapi</id>`\
-        &nbsp;&nbsp;&nbsp;&nbsp;`<url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>`\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<id>placeholderapi</id>`\
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>`\
     `</repository>`\
     
 * if using Gradle or not sure just look at PAPI's dependency [manual](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Hook-into-PlaceholderAPI)        
